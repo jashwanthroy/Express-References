@@ -70,12 +70,12 @@ app.get("/json",(req,res)=>{
 
 //status response
 app.get("/status",(req,res)=>{
-  res.status(200).send("Status of 200 SUCCESS!!")
+  res.send("Status of 200 SUCCESS!!").status(404)
 })
 
 //Redirecting to new URL
 app.get("/url",(req,res)=>{
-  res.redirect("https://www.youtube.com")
+  res.redirect(301,"https://www.youtube.com")
 })
 
 //rendering views
